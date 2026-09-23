@@ -1,0 +1,54 @@
+:root{
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  *{box-sizing:border-box;}
+  html,body{
+    height:100%;
+    margin:0;
+    background:#0a0505;
+  }
+  body{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:100%;
+  }
+  .frame{
+    position:relative;
+    width:100%;
+    max-width:526px;
+    line-height:0;
+  }
+  .frame img{
+    width:100%;
+    height:auto;
+    display:block;
+  }
+  .hotspot{
+    position:absolute;
+    left:27.947%;
+    width:44.011%;
+    border-radius:2.81% / 15.66%;
+    overflow:hidden;
+    cursor:pointer;
+  }
+  .hotspot::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(255,255,255,0.18);
+    opacity:0;
+    transition:opacity 0.2s ease, background 0.2s ease;
+  }
+  .hotspot:hover::before{
+    opacity:1;
+  }
+  .hotspot:active::before{
+    background:rgba(0,0,0,0.18);
+    opacity:1;
+  }
+  #linkedin{ top:53.244%; height:5.552%; }
+  #github{ top:59.933%; height:5.485%; }
+  #email{ top:66.555%; height:5.552%; }
